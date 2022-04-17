@@ -10,7 +10,7 @@ Team Members: Nicolas Carreras, Leticia Genao, Kevin Peng, and Molovi Shuba
 - [Data Dictionary](#5)
 - [EDA](#6)
 - [Summary of Analysis](#7)
-- [Conclusions and Recommendations](#8:)
+- [Conclusions and Recommendations](#8)
 - [What's next? - Future study/research](#9)
 - [Sources](#10)
 
