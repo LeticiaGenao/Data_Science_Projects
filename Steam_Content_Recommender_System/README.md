@@ -65,33 +65,33 @@ Note: Game title tested in system: "Doom", an action, gore, horror based game th
 
 
 #### Distribution of Description Length
-![desc_length](./images/dist_desc_length.png)
+![desc_length](./assets/dist_desc_length.png)
 There's a big difference in the description length amongst all the games in the dataset. According to the histogram descriptions under about 2,500 are the popular length, while the lengthy detailed descriptions are under 5,000 characters long. There are a total 192 descriptions over 5,000 characters. The distribution is left leaning.
 
 #### Distribution of Metasoup Length
-![desc_length](./images/dist_metasoup_length.png)
+![desc_length](./assets/dist_metasoup_length.png)
 Interesting enough it seamed the length of the metasoup is following a bit of a normal distribution type shape with most of the values residing in the center around 90 characters long and fanning outward in both directions.
 
 
 #### Unigrams - Top 25 Unigrams in Game Description
-![unigrams](./images/top25_unigrams.png)
+![unigrams](./assets/top25_unigrams.png)
 With the parameters chosen for cvec (min_df = 3, max_df = .90, max_features = 5000, stop_words = custom), some descriptive words like world, experience, adventure, weapon, and explore yield high frequency results. This provides a general idea about the how the descriptions are commonly worded, but a closer look at bigrams for further details is needed.
 
 #### Bigrams - Top 25 Bigrams in Game Description
-![bigrams](./images/top25_bigrams.png)
+![bigrams](./assets/top25_bigrams.png)
 Now, the bigrams gives a better perspective with key words such as "real time", "fast paced", "turn based", "open world", and "virtual reality" coming in at the top five. Some unique findings are bigrams like "old school", " htc vive", "early access" showing what type of games are described in the dataset. As there is a high frequency of these words, this could provide a good insight for steam's video game recommendation team to suggest more games in this category to encourage purchases or branch out to implement a broader variety.
 
 #### Trigrams - Top 25 Trigrams in Game Description
-![trigrams](./images/top25_trigrams.png)
+![trigrams](./assets/top25_trigrams.png)
 Finally, tri-grams demonstrates even more insight into the description of the games. "Real time strategy", "point click adventure", "turn based combat", and "turn based strategy" were the top four trigrams in the dataset. "Trading card games", "special collector edition", and trigrams involving adjectives of "exclusive", "extras", and "version" seem to be common features throughout the games. While the frequency of occurrence is smaller it gives more specialized insight into the language in the games descriptions.
 
 ## Recommender System Comparisons <a id=7></a>
 #### TFIDF on Game Description
-![tfidf](./images/TFIDF_Cosine_Similarity_Description.png)
+![tfidf](./assets/TFIDF_Cosine_Similarity_Description.png)
 
 This system returns the top 25 most similar games purely based on the description of the of games. However, 4 of the games are games in the doom series which a player most likely have played already. Whether English stop words or custom stop words are used, the cosine similarity scores stay the same in a range from 13-36% for the top 3 feature function. This recommender system version suggests games in the same franchise listing the other 3 Doom games first, but ranking dissimilar games like Chaordic and Reflex Arena high in the list. Lastly, the cosine similarity scores are pretty low. We need more information to generate better recommendations.
 #### CVEC on Game Description
-![tfidf](./images/CVEC_Cosine_Similarity_Description.png)
+![tfidf](./assets/CVEC_Cosine_Similarity_Description.png)
 
 Countvec Description 3 features English stop words
 - Interestingly enough, using the countvectorizer to find the commonality between descriptions yields higher cosine scores (34-40% range) than the TFIDF version (13-30% range). However, when the higher ranking game recommendations are manually inspected, they actually do not have much in common with the input game ('Doom') and would make for a poor recommendation system.
@@ -102,7 +102,7 @@ Note:
 - Only the 3 feature system was tested as it yielded higher cosine scores across the systems.
 
 #### CVEC on Metasoup Tags
-![tfidf](./images/CVEC_Cosine_Similarity_TAGS.png)
+![tfidf](./assets/CVEC_Cosine_Similarity_TAGS.png)
 
 Results of run with top 5 features custom stop words:
 - Comparing the first recommended game score from both recommender systems, the tag-based system has a 147.11% increase in cosine-similarity score over the description based system. The top 25 recommendations in the tag-based recommendation system having an 71-83% or higher similarity score whereas the description based recommender system's top 25 ranged from 13% to 36% match. A manual inspection of the recommended games shows a high commonality with the input game, 'Doom' and the recommendations than the description based system. The relevancy of the game recommendations are good as well.
