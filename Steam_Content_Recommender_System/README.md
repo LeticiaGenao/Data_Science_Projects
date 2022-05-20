@@ -65,24 +65,24 @@ Note: Game title tested in system: "Doom", an action, gore, horror based game th
 
 
 #### Distribution of Description Length
-![desc_length](./assets/dist_desc_length.png)
+![desc_length](./assets/dist_desc_length.PNG)
 There's a big difference in the description length amongst all the games in the dataset. According to the histogram descriptions under about 2,500 are the popular length, while the lengthy detailed descriptions are under 5,000 characters long. There are a total 192 descriptions over 5,000 characters. The distribution is left leaning.
 
 #### Distribution of Metasoup Length
-![desc_length](./assets/dist_metasoup_length.png)
+![desc_length](./assets/dist_metasoup_length.PNG)
 Interesting enough it seamed the length of the metasoup is following a bit of a normal distribution type shape with most of the values residing in the center around 90 characters long and fanning outward in both directions.
 
 
 #### Unigrams - Top 25 Unigrams in Game Description
-![unigrams](./assets/top25_unigrams.png)
+![unigrams](./assets/top25_unigrams.PNG)
 With the parameters chosen for cvec (min_df = 3, max_df = .90, max_features = 5000, stop_words = custom), some descriptive words like world, experience, adventure, weapon, and explore yield high frequency results. This provides a general idea about the how the descriptions are commonly worded, but a closer look at bigrams for further details is needed.
 
 #### Bigrams - Top 25 Bigrams in Game Description
-![bigrams](./assets/top25_bigrams.png)
+![bigrams](./assets/top25_bigrams.PNG)
 Now, the bigrams gives a better perspective with key words such as "real time", "fast paced", "turn based", "open world", and "virtual reality" coming in at the top five. Some unique findings are bigrams like "old school", " htc vive", "early access" showing what type of games are described in the dataset. As there is a high frequency of these words, this could provide a good insight for steam's video game recommendation team to suggest more games in this category to encourage purchases or branch out to implement a broader variety.
 
 #### Trigrams - Top 25 Trigrams in Game Description
-![trigrams](./assets/top25_trigrams.png)
+![trigrams](./assets/top25_trigrams.PNG)
 Finally, tri-grams demonstrates even more insight into the description of the games. "Real time strategy", "point click adventure", "turn based combat", and "turn based strategy" were the top four trigrams in the dataset. "Trading card games", "special collector edition", and trigrams involving adjectives of "exclusive", "extras", and "version" seem to be common features throughout the games. While the frequency of occurrence is smaller it gives more specialized insight into the language in the games descriptions.
 
 ## Recommender System Comparisons <a id=7></a>
